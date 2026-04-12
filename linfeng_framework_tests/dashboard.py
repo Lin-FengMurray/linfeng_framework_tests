@@ -3,6 +3,8 @@ dashboard.py — Playwright Test Results Dashboard
 Run with: streamlit run dashboard.py
 """
 
+import shutil
+import subprocess
 from pathlib import Path
 
 import pandas as pd
@@ -12,7 +14,11 @@ import streamlit as st
 # ── Config ────────────────────────────────────────────────────────────────────
 st.set_page_config(page_title="Test Results Dashboard", layout="wide")
 
-BASE_DIR = Path(__file__).resolve().parent
+BASE_DIR  = Path(__file__).resolve().parent
+REPO_ROOT = BASE_DIR.parent
+
+# True when npx is available (local), False on Streamlit Cloud
+CAN_RUN_TESTS = shutil.which("npx") is not None
 
 CSV_FILES = {
     "hackernews":        BASE_DIR / "hackernews"        / "test_results.csv",
@@ -44,6 +50,65 @@ def normalize_suite(row) -> str:
         return str(row["_source"]).strip()
     return str(row["suite"]).strip()
 
+
+def run_tests(suite: str, browsers: list) -> tuple:
+    """Run Playwright tests for the given suite + browsers and pipe output to CSV generator.
+    Runs the two steps explicitly so failures in either step surface clearly.
+    Returns (returncode, combined_output)."""
+    browser_to_project = {
+        "chromium": suite,
+        "firefox":  f"{suite}-firefox",
+        "webkit":   f"{suite}-webkit",
+    }
+    project_flags = [
+        f"--project={browser_to_project[b]}"
+        for b in browsers
+        if b in browser_to_project
+    ]
+
+    # Step 1: run Playwright, capture JSON from stdout
+    pw_result = subprocess.run(
+        ["/usr/local/bin/npx", "playwright", "test", "--config=playwright.config.js"]
+        + project_flags + ["--reporter=json"],
+        cwd=str(REPO_ROOT),
+        capture_output=True,
+        text=True,
+        timeout=300,
+    )
+    if not pw_result.stdout.strip():
+        return pw_result.returncode, f"Playwright produced no output.\nSTDERR:\n{pw_result.stderr}"
+
+    # Step 2: pipe JSON into the CSV generator
+    csv_script = str(REPO_ROOT / f"linfeng_framework_tests/{suite}/scripts/generate_csv_report.js")
+    node_result = subprocess.run(
+        ["/usr/local/bin/node", csv_script],
+        input=pw_result.stdout,
+        cwd=str(REPO_ROOT),
+        capture_output=True,
+        text=True,
+        timeout=30,
+    )
+    output = node_result.stdout
+    if pw_result.stderr.strip():
+        output += f"\nPlaywright output:\n{pw_result.stderr}"
+    if node_result.stderr:
+        output += f"\nNode STDERR:\n{node_result.stderr}"
+    if "Rows appended : 0" in node_result.stdout:
+        import json as _json
+        try:
+            _j = _json.loads(pw_result.stdout)
+            _suites = _j.get("suites", [])
+            _errors = _j.get("errors", [])
+            output += f"\nDebug — top-level suites: {len(_suites)}, errors: {len(_errors)}"
+            if _errors:
+                output += f"\nErrors: {_json.dumps(_errors, indent=2)[:1000]}"
+            if _suites:
+                output += f"\nFirst suite keys: {list(_suites[0].keys())}"
+            else:
+                output += f"\nJSON keys: {list(_j.keys())}"
+        except Exception as e:
+            output += f"\nDebug — could not parse JSON: {e}\nRaw (first 300 chars): {pw_result.stdout[:300]}"
+    return node_result.returncode, output.strip()
 
 
 @st.cache_data(ttl=0)
@@ -81,6 +146,27 @@ def load_data() -> pd.DataFrame:
 
 # ── Load ──────────────────────────────────────────────────────────────────────
 df_all = load_data()
+
+# Phase 2: execute pending test runs
+if st.session_state.get("pending_run_suites"):
+    _suites   = st.session_state.pop("pending_run_suites")
+    _browsers = st.session_state.pop("pending_run_browsers")
+    _all_out  = []
+    _rc       = 0
+    for _suite in _suites:
+        with st.spinner(f"Running {_suite} tests…"):
+            try:
+                rc, out = run_tests(_suite, _browsers)
+            except subprocess.TimeoutExpired:
+                rc, out = 1, f"{_suite}: timed out after 5 minutes."
+        if rc != 0:
+            _rc = rc
+        if out:
+            _all_out.append(f"── {_suite} ──\n{out}")
+    st.session_state["last_run_rc"]  = _rc
+    st.session_state["last_run_out"] = "\n\n".join(_all_out)
+    st.cache_data.clear()
+    st.rerun()
 
 # ── Sidebar filters ───────────────────────────────────────────────────────────
 st.sidebar.title("Filters")
@@ -123,10 +209,48 @@ statuses    = ["All"] + sorted(df_all["status"].dropna().unique().tolist())
 sel_browser = st.sidebar.selectbox("Browser", browsers, index=0)
 sel_status  = st.sidebar.selectbox("Status",  statuses)
 
+_run_browsers  = (
+    ["chromium", "firefox", "webkit"] if sel_browser == "All"
+    else [sel_browser]
+)
+_target_suites = all_suites if sel_framework == "All" else [sel_framework]
+_CSV_HEADER    = (
+    "run_timestamp,suite,section,subfolder,file,"
+    "test_title,status,duration_ms,retry,browser,"
+    "error_message,error_location"
+)
 _btn_run, _btn_clear = st.sidebar.columns(2)
-_btn_run.button("Run Tests", type="primary", disabled=True, use_container_width=True)
-_btn_clear.button("Clear", disabled=True, use_container_width=True)
-st.sidebar.caption("Run tests locally and push the updated CSVs to GitHub to refresh results.")
+
+if _btn_clear.button("Clear", key="btn_clear_csv", disabled=not CAN_RUN_TESTS, use_container_width=True):
+    for _s in _target_suites:
+        CSV_FILES[_s].write_text(_CSV_HEADER + "\n", encoding="utf-8")
+    st.session_state["last_run_rc"]  = None
+    st.session_state["last_run_out"] = None
+    st.cache_data.clear()
+    st.rerun()
+
+if _btn_run.button("Run Tests", type="primary", key="btn_run_tests", disabled=not CAN_RUN_TESTS, use_container_width=True):
+    for _s in _target_suites:
+        CSV_FILES[_s].write_text(_CSV_HEADER + "\n", encoding="utf-8")
+    st.session_state["pending_run_suites"]   = _target_suites
+    st.session_state["pending_run_browsers"] = _run_browsers
+    st.session_state["last_run_rc"]          = None
+    st.session_state["last_run_out"]         = None
+    st.cache_data.clear()
+    st.rerun()
+
+if not CAN_RUN_TESTS:
+    st.sidebar.caption("Run tests locally and push the updated CSVs to GitHub to refresh results.")
+
+_rc  = st.session_state.get("last_run_rc")
+_out = st.session_state.get("last_run_out")
+if _rc is not None:
+    if _rc == 0:
+        st.sidebar.success("Tests finished. CSV updated.")
+    else:
+        st.sidebar.warning(f"Tests finished with exit code {_rc}.")
+if _out:
+    st.sidebar.code(_out, language="")
 
 st.sidebar.divider()
 
