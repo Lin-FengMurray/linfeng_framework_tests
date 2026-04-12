@@ -123,7 +123,10 @@ statuses    = ["All"] + sorted(df_all["status"].dropna().unique().tolist())
 sel_browser = st.sidebar.selectbox("Browser", browsers, index=0)
 sel_status  = st.sidebar.selectbox("Status",  statuses)
 
-st.sidebar.caption("To update results, run tests locally and push the updated CSVs to GitHub.")
+_btn_run, _btn_clear = st.sidebar.columns(2)
+_btn_run.button("Run Tests", type="primary", disabled=True, use_container_width=True)
+_btn_clear.button("Clear", disabled=True, use_container_width=True)
+st.sidebar.caption("Run tests locally and push the updated CSVs to GitHub to refresh results.")
 
 st.sidebar.divider()
 
