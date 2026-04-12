@@ -3,7 +3,6 @@ dashboard.py — Playwright Test Results Dashboard
 Run with: streamlit run dashboard.py
 """
 
-import requests
 from pathlib import Path
 
 import pandas as pd
@@ -13,8 +12,7 @@ import streamlit as st
 # ── Config ────────────────────────────────────────────────────────────────────
 st.set_page_config(page_title="Test Results Dashboard", layout="wide")
 
-BASE_DIR  = Path(__file__).resolve().parent
-REPO_ROOT = BASE_DIR.parent
+BASE_DIR = Path(__file__).resolve().parent
 
 CSV_FILES = {
     "hackernews":        BASE_DIR / "hackernews"        / "test_results.csv",
@@ -46,40 +44,6 @@ def normalize_suite(row) -> str:
         return str(row["_source"]).strip()
     return str(row["suite"]).strip()
 
-
-def trigger_github_workflow(suites: list, browsers: list) -> tuple:
-    """Trigger the GitHub Actions run-tests workflow via the GitHub API.
-    Returns (success: bool, message: str)."""
-    token = st.secrets.get("GITHUB_TOKEN", "")
-    if not token:
-        return False, (
-            "GITHUB_TOKEN not found in Streamlit secrets.\n"
-            "Add it via the Streamlit Cloud dashboard under App settings → Secrets."
-        )
-    url = (
-        "https://api.github.com/repos/Lin-FengMurray/linfeng_framework_tests"
-        "/actions/workflows/run-tests.yml/dispatches"
-    )
-    headers = {
-        "Authorization": f"Bearer {token}",
-        "Accept": "application/vnd.github+json",
-        "X-GitHub-Api-Version": "2022-11-28",
-    }
-    payload = {
-        "ref": "main",
-        "inputs": {
-            "suites":   ",".join(suites),
-            "browsers": ",".join(browsers),
-        },
-    }
-    resp = requests.post(url, json=payload, headers=headers)
-    if resp.status_code == 204:
-        return True, (
-            "Tests triggered on GitHub Actions.\n"
-            "Results will appear in ~3–5 minutes once the workflow\n"
-            "completes and Streamlit refreshes from the updated CSVs."
-        )
-    return False, f"Failed to trigger workflow ({resp.status_code}):\n{resp.text}"
 
 
 @st.cache_data(ttl=0)
@@ -117,15 +81,6 @@ def load_data() -> pd.DataFrame:
 
 # ── Load ──────────────────────────────────────────────────────────────────────
 df_all = load_data()
-
-# Phase 2: trigger GitHub Actions workflow for pending test runs
-if st.session_state.get("pending_run_suites"):
-    _suites   = st.session_state.pop("pending_run_suites")
-    _browsers = st.session_state.pop("pending_run_browsers")
-    _ok, _msg = trigger_github_workflow(_suites, _browsers)
-    st.session_state["last_run_rc"]  = 0 if _ok else 1
-    st.session_state["last_run_out"] = _msg
-    st.rerun()
 
 # ── Sidebar filters ───────────────────────────────────────────────────────────
 st.sidebar.title("Filters")
@@ -168,44 +123,7 @@ statuses    = ["All"] + sorted(df_all["status"].dropna().unique().tolist())
 sel_browser = st.sidebar.selectbox("Browser", browsers, index=0)
 sel_status  = st.sidebar.selectbox("Status",  statuses)
 
-# ── Run Tests / Clear buttons ─────────────────────────────────────────────────
-_run_browsers  = (
-    ["chromium", "firefox", "webkit"] if sel_browser == "All"
-    else [sel_browser]
-)
-_target_suites = all_suites if sel_framework == "All" else [sel_framework]
-_CSV_HEADER    = (
-    "run_timestamp,suite,section,subfolder,file,"
-    "test_title,status,duration_ms,retry,browser,"
-    "error_message,error_location"
-)
-_btn_run, _btn_clear = st.sidebar.columns(2)
-
-if _btn_clear.button("Clear", key="btn_clear_csv", use_container_width=True):
-    for _s in _target_suites:
-        CSV_FILES[_s].write_text(_CSV_HEADER + "\n", encoding="utf-8")
-    st.session_state["last_run_rc"]  = None
-    st.session_state["last_run_out"] = None
-    st.cache_data.clear()
-    st.rerun()
-
-if _btn_run.button("Run Tests", type="primary", key="btn_run_tests", use_container_width=True):
-    st.session_state["pending_run_suites"]   = _target_suites
-    st.session_state["pending_run_browsers"] = _run_browsers
-    st.session_state["last_run_rc"]          = None
-    st.session_state["last_run_out"]         = None
-    st.rerun()
-
-
-_rc  = st.session_state.get("last_run_rc")
-_out = st.session_state.get("last_run_out")
-if _rc is not None:
-    if _rc == 0:
-        st.sidebar.success("Tests triggered on GitHub Actions.")
-    else:
-        st.sidebar.error("Failed to trigger workflow.")
-if _out:
-    st.sidebar.code(_out, language="")
+st.sidebar.caption("To update results, run tests locally and push the updated CSVs to GitHub.")
 
 st.sidebar.divider()
 
