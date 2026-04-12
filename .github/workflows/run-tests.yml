@@ -1,0 +1,68 @@
+name: Run Playwright Tests
+
+on:
+  workflow_dispatch:
+    inputs:
+      suites:
+        description: 'Comma-separated suites (hackernews,nopcommerce,automationexercise)'
+        required: true
+        default: 'hackernews,nopcommerce,automationexercise'
+      browsers:
+        description: 'Comma-separated browsers (chromium,firefox,webkit)'
+        required: true
+        default: 'chromium,firefox,webkit'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps
+
+      - name: Clear CSVs
+        run: |
+          HEADER="run_timestamp,suite,section,subfolder,file,test_title,status,duration_ms,retry,browser,error_message,error_location"
+          IFS=',' read -ra SUITES <<< "${{ github.event.inputs.suites }}"
+          for suite in "${SUITES[@]}"; do
+            echo "$HEADER" > "linfeng_framework_tests/${suite}/test_results.csv"
+          done
+
+      - name: Run tests and generate CSVs
+        run: |
+          IFS=',' read -ra SUITES <<< "${{ github.event.inputs.suites }}"
+          IFS=',' read -ra BROWSERS <<< "${{ github.event.inputs.browsers }}"
+          for suite in "${SUITES[@]}"; do
+            for browser in "${BROWSERS[@]}"; do
+              if [ "$browser" = "chromium" ]; then
+                project="$suite"
+              else
+                project="${suite}-${browser}"
+              fi
+              echo "==> Running $suite / $browser (project: $project)"
+              npx playwright test --config=playwright.config.js \
+                --project="$project" \
+                --reporter=json 2>/dev/null \
+              | node "linfeng_framework_tests/${suite}/scripts/generate_csv_report.js" || true
+            done
+          done
+
+      - name: Commit updated CSVs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add linfeng_framework_tests/*/test_results.csv
+          git diff --staged --quiet || git commit -m "chore: update test results [skip ci]"
+          git push

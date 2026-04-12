@@ -3,7 +3,7 @@ dashboard.py — Playwright Test Results Dashboard
 Run with: streamlit run dashboard.py
 """
 
-import subprocess
+import requests
 from pathlib import Path
 
 import pandas as pd
@@ -47,64 +47,39 @@ def normalize_suite(row) -> str:
     return str(row["suite"]).strip()
 
 
-def run_tests(suite: str, browsers: list) -> tuple:
-    """Run Playwright tests for the given suite + browsers and pipe output to CSV generator.
-    Runs the two steps explicitly so failures in either step surface clearly.
-    Returns (returncode, combined_output)."""
-    browser_to_project = {
-        "chromium": suite,
-        "firefox":  f"{suite}-firefox",
-        "webkit":   f"{suite}-webkit",
+def trigger_github_workflow(suites: list, browsers: list) -> tuple:
+    """Trigger the GitHub Actions run-tests workflow via the GitHub API.
+    Returns (success: bool, message: str)."""
+    token = st.secrets.get("GITHUB_TOKEN", "")
+    if not token:
+        return False, (
+            "GITHUB_TOKEN not found in Streamlit secrets.\n"
+            "Add it via the Streamlit Cloud dashboard under App settings → Secrets."
+        )
+    url = (
+        "https://api.github.com/repos/Lin-FengMurray/linfeng_framework_tests"
+        "/actions/workflows/run-tests.yml/dispatches"
+    )
+    headers = {
+        "Authorization": f"Bearer {token}",
+        "Accept": "application/vnd.github+json",
+        "X-GitHub-Api-Version": "2022-11-28",
     }
-    project_flags = [
-        f"--project={browser_to_project[b]}"
-        for b in browsers
-        if b in browser_to_project
-    ]
-
-    # Step 1: run Playwright, capture JSON from stdout
-    pw_result = subprocess.run(
-        ["/usr/local/bin/npx", "playwright", "test", "--config=playwright.config.js"]
-        + project_flags + ["--reporter=json"],
-        cwd=str(REPO_ROOT),
-        capture_output=True,
-        text=True,
-        timeout=300,
-    )
-    if not pw_result.stdout.strip():
-        return pw_result.returncode, f"Playwright produced no output.\nSTDERR:\n{pw_result.stderr}"
-
-    # Step 2: pipe JSON into the CSV generator
-    csv_script = str(REPO_ROOT / f"linfeng_framework_tests/{suite}/scripts/generate_csv_report.js")
-    node_result = subprocess.run(
-        ["/usr/local/bin/node", csv_script],
-        input=pw_result.stdout,
-        cwd=str(REPO_ROOT),
-        capture_output=True,
-        text=True,
-        timeout=30,
-    )
-    output = node_result.stdout
-    if pw_result.stderr.strip():
-        output += f"\nPlaywright output:\n{pw_result.stderr}"
-    if node_result.stderr:
-        output += f"\nNode STDERR:\n{node_result.stderr}"
-    if "Rows appended : 0" in node_result.stdout:
-        import json as _json
-        try:
-            _j = _json.loads(pw_result.stdout)
-            _suites = _j.get("suites", [])
-            _errors = _j.get("errors", [])
-            output += f"\nDebug — top-level suites: {len(_suites)}, errors: {len(_errors)}"
-            if _errors:
-                output += f"\nErrors: {_json.dumps(_errors, indent=2)[:1000]}"
-            if _suites:
-                output += f"\nFirst suite keys: {list(_suites[0].keys())}"
-            else:
-                output += f"\nJSON keys: {list(_j.keys())}"
-        except Exception as e:
-            output += f"\nDebug — could not parse JSON: {e}\nRaw (first 300 chars): {pw_result.stdout[:300]}"
-    return node_result.returncode, output.strip()
+    payload = {
+        "ref": "main",
+        "inputs": {
+            "suites":   ",".join(suites),
+            "browsers": ",".join(browsers),
+        },
+    }
+    resp = requests.post(url, json=payload, headers=headers)
+    if resp.status_code == 204:
+        return True, (
+            "Tests triggered on GitHub Actions.\n"
+            "Results will appear in ~3–5 minutes once the workflow\n"
+            "completes and Streamlit refreshes from the updated CSVs."
+        )
+    return False, f"Failed to trigger workflow ({resp.status_code}):\n{resp.text}"
 
 
 @st.cache_data(ttl=0)
@@ -143,26 +118,13 @@ def load_data() -> pd.DataFrame:
 # ── Load ──────────────────────────────────────────────────────────────────────
 df_all = load_data()
 
-# Phase 2: execute pending test runs (must happen before the empty-data guard
-# so the cleared CSV doesn't block execution)
+# Phase 2: trigger GitHub Actions workflow for pending test runs
 if st.session_state.get("pending_run_suites"):
     _suites   = st.session_state.pop("pending_run_suites")
     _browsers = st.session_state.pop("pending_run_browsers")
-    _all_out  = []
-    _rc       = 0
-    for _suite in _suites:
-        with st.spinner(f"Running {_suite} tests…"):
-            try:
-                rc, out = run_tests(_suite, _browsers)
-            except subprocess.TimeoutExpired:
-                rc, out = 1, f"{_suite}: timed out after 5 minutes."
-        if rc != 0:
-            _rc = rc
-        if out:
-            _all_out.append(f"── {_suite} ──\n{out}")
-    st.session_state["last_run_rc"]  = _rc
-    st.session_state["last_run_out"] = "\n\n".join(_all_out)
-    st.cache_data.clear()
+    _ok, _msg = trigger_github_workflow(_suites, _browsers)
+    st.session_state["last_run_rc"]  = 0 if _ok else 1
+    st.session_state["last_run_out"] = _msg
     st.rerun()
 
 # ── Sidebar filters ───────────────────────────────────────────────────────────
@@ -228,14 +190,10 @@ if _btn_clear.button("Clear", key="btn_clear_csv", use_container_width=True):
     st.rerun()
 
 if _btn_run.button("Run Tests", type="primary", key="btn_run_tests", use_container_width=True):
-    # Phase 1: clear CSVs immediately so the dashboard shows 0s
-    for _s in _target_suites:
-        CSV_FILES[_s].write_text(_CSV_HEADER + "\n", encoding="utf-8")
     st.session_state["pending_run_suites"]   = _target_suites
     st.session_state["pending_run_browsers"] = _run_browsers
     st.session_state["last_run_rc"]          = None
     st.session_state["last_run_out"]         = None
-    st.cache_data.clear()
     st.rerun()
 
 
@@ -243,9 +201,9 @@ _rc  = st.session_state.get("last_run_rc")
 _out = st.session_state.get("last_run_out")
 if _rc is not None:
     if _rc == 0:
-        st.sidebar.success("Tests finished. CSV updated.")
+        st.sidebar.success("Tests triggered on GitHub Actions.")
     else:
-        st.sidebar.warning(f"Tests finished with exit code {_rc}.")
+        st.sidebar.error("Failed to trigger workflow.")
 if _out:
     st.sidebar.code(_out, language="")
 
