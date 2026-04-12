@@ -1,0 +1,29 @@
+
+{
+  "books": {
+    "productName": "Fahrenheit 451 by Ray Bradbury",
+    "category": "Books",
+    "url": "/fahrenheit-451-by-ray-bradbury"
+  },
+  "computers": {
+    "productName": "Build your own computer",
+    "searchKeyword": "computer",
+    "category": "Computers",
+    "url": "/build-your-own-computer"
+  },
+  "electronics": {
+    "productName": "Cell phones",
+    "category": "Electronics",
+    "url": "/cell-phones"
+  },
+  "giftCard": {
+    "productName": "$25 Virtual Gift Card",
+    "category": "Gift Cards",
+    "url": "/25-virtual-gift-card",
+    "recipientName": "Test Receiver",
+    "recipientEmail": "receiver@example.com",
+    "senderName": "LinFeng",
+    "senderEmail": "linfeng.sender@example.com",
+    "message": "Enjoy your gift card!"
+  }
+}

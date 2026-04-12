@@ -1,0 +1,22 @@
+{
+  "name": "qa_wolf_take_home",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Playwright JavaScript test framework for Hacker News and nopCommerce",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test"
+  },
+  "keywords": [
+    "playwright",
+    "javascript",
+    "automation",
+    "e2e"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.59.1",
+    "@types/node": "^20.8.9"
+  }
+}

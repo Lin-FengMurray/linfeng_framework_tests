@@ -1,0 +1,5 @@
+[
+  {
+    "note": "Do NOT use this file for authentication in tests. Use utils/testDataFactory.js createUser() instead — it generates a unique test_<uuid>@example.com email per run and avoids collisions. This file exists for documentation purposes only."
+  }
+]

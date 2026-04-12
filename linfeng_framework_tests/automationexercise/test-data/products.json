@@ -1,0 +1,5 @@
+[
+  { "searchTerm": "dress", "label": "Dress" },
+  { "searchTerm": "top",   "label": "Top"   },
+  { "searchTerm": "jeans", "label": "Jeans" }
+]

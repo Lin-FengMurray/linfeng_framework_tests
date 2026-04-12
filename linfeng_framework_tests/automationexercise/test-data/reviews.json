@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Alice Tester",
+    "email": "alice.tester@example.com",
+    "text": "Great product! Highly recommend it to everyone."
+  },
+  {
+    "name": "Bob Reviewer",
+    "email": "bob.reviewer@example.com",
+    "text": "Good quality but delivery took a bit longer than expected."
+  }
+]

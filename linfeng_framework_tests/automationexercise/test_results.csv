@@ -1,0 +1,493 @@
+run_timestamp,suite,section,subfolder,file,test_title,status,duration_ms,retry,browser,error_message,error_location
+
+2026-04-10T23:47:44.505Z,automationexercise,api,01_smoke,brands_api_returns_200.spec.js,brands API returns 200,passed,355,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,api,01_smoke,brands_api_returns_200.spec.js,brands API returns 200,passed,367,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,api,01_smoke,brands_api_returns_200.spec.js,brands API returns 200,passed,281,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,api,01_smoke,products_api_returns_200.spec.js,products API returns 200,passed,454,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,api,01_smoke,products_api_returns_200.spec.js,products API returns 200,passed,303,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,api,01_smoke,products_api_returns_200.spec.js,products API returns 200,passed,430,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,api,02_products,get_all_products_returns_full_list.spec.js,get all products returns full list,passed,474,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,api,02_products,get_all_products_returns_full_list.spec.js,get all products returns full list,passed,168,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,api,02_products,get_all_products_returns_full_list.spec.js,get all products returns full list,passed,235,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,api,02_products,post_to_products_returns_405.spec.js,POST to products list returns 405,passed,360,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,api,02_products,post_to_products_returns_405.spec.js,POST to products list returns 405,passed,350,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,api,02_products,post_to_products_returns_405.spec.js,POST to products list returns 405,passed,186,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,api,02_products,search_product_returns_matching_results.spec.js,search product returns matching results,passed,485,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,api,02_products,search_product_returns_matching_results.spec.js,search product returns matching results,passed,409,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,api,02_products,search_product_returns_matching_results.spec.js,search product returns matching results,passed,398,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,api,02_products,search_without_param_returns_400.spec.js,search without param returns 400,passed,202,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,api,02_products,search_without_param_returns_400.spec.js,search without param returns 400,passed,265,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,api,02_products,search_without_param_returns_400.spec.js,search without param returns 400,passed,111,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,api,03_brands,get_all_brands_returns_full_list.spec.js,get all brands returns full list,passed,198,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,api,03_brands,get_all_brands_returns_full_list.spec.js,get all brands returns full list,passed,107,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,api,03_brands,get_all_brands_returns_full_list.spec.js,get all brands returns full list,passed,108,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,api,03_brands,put_to_brands_returns_405.spec.js,PUT to brands list returns 405,passed,148,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,api,03_brands,put_to_brands_returns_405.spec.js,PUT to brands list returns 405,passed,96,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,api,03_brands,put_to_brands_returns_405.spec.js,PUT to brands list returns 405,passed,167,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,api,04_auth,create_account_returns_201_user_created.spec.js,create account returns 201 user created,passed,338,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,api,04_auth,create_account_returns_201_user_created.spec.js,create account returns 201 user created,passed,287,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,api,04_auth,create_account_returns_201_user_created.spec.js,create account returns 201 user created,passed,319,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,api,04_auth,delete_account_returns_200_account_deleted.spec.js,delete account returns 200 account deleted,passed,332,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,api,04_auth,delete_account_returns_200_account_deleted.spec.js,delete account returns 200 account deleted,passed,285,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,api,04_auth,delete_account_returns_200_account_deleted.spec.js,delete account returns 200 account deleted,passed,219,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,api,04_auth,update_account_returns_200_user_updated.spec.js,update account returns 200 user updated,passed,360,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,api,04_auth,update_account_returns_200_user_updated.spec.js,update account returns 200 user updated,passed,323,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,api,04_auth,update_account_returns_200_user_updated.spec.js,update account returns 200 user updated,passed,389,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,api,04_auth,get_user_detail_by_email_returns_full_profile.spec.js,get user detail by email returns full profile,passed,347,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,api,04_auth,get_user_detail_by_email_returns_full_profile.spec.js,get user detail by email returns full profile,passed,315,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,api,04_auth,get_user_detail_by_email_returns_full_profile.spec.js,get user detail by email returns full profile,passed,382,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,api,04_auth,get_user_with_unknown_email_returns_404.spec.js,get user with unknown email returns 404,passed,186,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,api,04_auth,get_user_with_unknown_email_returns_404.spec.js,get user with unknown email returns 404,passed,104,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,api,04_auth,get_user_with_unknown_email_returns_404.spec.js,get user with unknown email returns 404,passed,113,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,api,04_auth,verify_login_via_delete_returns_405.spec.js,verify login via DELETE returns 405,passed,96,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,api,04_auth,verify_login_via_delete_returns_405.spec.js,verify login via DELETE returns 405,passed,94,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,api,04_auth,verify_login_via_delete_returns_405.spec.js,verify login via DELETE returns 405,passed,148,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,api,04_auth,verify_login_with_invalid_credentials_returns_404.spec.js,verify login with invalid credentials returns 404,passed,106,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,api,04_auth,verify_login_with_invalid_credentials_returns_404.spec.js,verify login with invalid credentials returns 404,passed,104,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,api,04_auth,verify_login_with_invalid_credentials_returns_404.spec.js,verify login with invalid credentials returns 404,passed,180,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,api,04_auth,verify_login_with_valid_credentials_returns_200.spec.js,verify login with valid credentials returns 200,passed,330,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,api,04_auth,verify_login_with_valid_credentials_returns_200.spec.js,verify login with valid credentials returns 200,passed,394,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,api,04_auth,verify_login_with_valid_credentials_returns_200.spec.js,verify login with valid credentials returns 200,passed,320,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,api,04_auth,verify_login_without_email_returns_400.spec.js,verify login without email returns 400,passed,101,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,api,04_auth,verify_login_without_email_returns_400.spec.js,verify login without email returns 400,passed,98,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,api,04_auth,verify_login_without_email_returns_400.spec.js,verify login without email returns 400,passed,101,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,api,05_schema,brand_ids_are_unique_across_the_list.spec.js,brand IDs are unique across the list,passed,110,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,api,05_schema,brand_ids_are_unique_across_the_list.spec.js,brand IDs are unique across the list,passed,93,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,api,05_schema,brand_ids_are_unique_across_the_list.spec.js,brand IDs are unique across the list,passed,104,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,api,05_schema,brands_response_matches_expected_schema.spec.js,brands response matches expected schema,passed,98,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,api,05_schema,brands_response_matches_expected_schema.spec.js,brands response matches expected schema,passed,91,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,api,05_schema,brands_response_matches_expected_schema.spec.js,brands response matches expected schema,passed,105,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,api,05_schema,400_response_contains_responseCode_and_message.spec.js,400 response contains responseCode and message,passed,96,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,api,05_schema,400_response_contains_responseCode_and_message.spec.js,400 response contains responseCode and message,passed,179,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,api,05_schema,400_response_contains_responseCode_and_message.spec.js,400 response contains responseCode and message,passed,92,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,api,05_schema,405_response_contains_responseCode_and_message.spec.js,405 response contains responseCode and message,passed,91,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,api,05_schema,405_response_contains_responseCode_and_message.spec.js,405 response contains responseCode and message,passed,160,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,api,05_schema,405_response_contains_responseCode_and_message.spec.js,405 response contains responseCode and message,passed,106,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,api,05_schema,product_price_field_is_parseable_currency.spec.js,product price field is parseable currency,passed,217,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,api,05_schema,product_price_field_is_parseable_currency.spec.js,product price field is parseable currency,passed,261,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,api,05_schema,product_price_field_is_parseable_currency.spec.js,product price field is parseable currency,passed,192,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,api,05_schema,products_response_matches_expected_schema.spec.js,products response matches expected schema,passed,172,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,api,05_schema,products_response_matches_expected_schema.spec.js,products response matches expected schema,passed,225,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,api,05_schema,products_response_matches_expected_schema.spec.js,products response matches expected schema,passed,144,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,api,05_schema,search_results_match_products_schema.spec.js,search results match products schema,passed,132,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,api,05_schema,search_results_match_products_schema.spec.js,search results match products schema,passed,120,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,api,05_schema,search_results_match_products_schema.spec.js,search results match products schema,passed,137,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,api,05_schema,user_detail_response_matches_expected_schema.spec.js,user detail response matches expected schema,passed,390,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,api,05_schema,user_detail_response_matches_expected_schema.spec.js,user detail response matches expected schema,passed,296,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,api,05_schema,user_detail_response_matches_expected_schema.spec.js,user detail response matches expected schema,passed,397,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,api,05_schema,user_email_in_response_matches_registered_email.spec.js,user email in response matches registered email,passed,362,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,api,05_schema,user_email_in_response_matches_registered_email.spec.js,user email in response matches registered email,passed,312,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,api,05_schema,user_email_in_response_matches_registered_email.spec.js,user email in response matches registered email,passed,376,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,api,06_contract,account_created_via_api_is_loginable_in_ui.spec.js,account created via API is loginable in UI,passed,2609,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,api,06_contract,account_created_via_api_is_loginable_in_ui.spec.js,account created via API is loginable in UI,passed,3020,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,api,06_contract,account_created_via_api_is_loginable_in_ui.spec.js,account created via API is loginable in UI,passed,3764,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,api,06_contract,account_deleted_via_api_blocks_ui_login.spec.js,account deleted via API blocks UI login,passed,1681,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,api,06_contract,account_deleted_via_api_blocks_ui_login.spec.js,account deleted via API blocks UI login,passed,2813,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,api,06_contract,account_deleted_via_api_blocks_ui_login.spec.js,account deleted via API blocks UI login,passed,2478,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,api,06_contract,account_updated_via_api_reflects_in_ui_session.spec.js,account updated via API reflects in UI session,passed,2575,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,api,06_contract,account_updated_via_api_reflects_in_ui_session.spec.js,account updated via API reflects in UI session,passed,4358,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,api,06_contract,account_updated_via_api_reflects_in_ui_session.spec.js,account updated via API reflects in UI session,passed,4053,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,api,06_contract,brand_list_from_api_matches_ui_sidebar.spec.js,brand list from API matches UI sidebar,passed,1206,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,api,06_contract,brand_list_from_api_matches_ui_sidebar.spec.js,brand list from API matches UI sidebar,passed,2360,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,api,06_contract,brand_list_from_api_matches_ui_sidebar.spec.js,brand list from API matches UI sidebar,passed,2215,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,api,06_contract,search_count_matches_between_api_and_ui.spec.js,search count matches between API and UI,passed,1444,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,api,06_contract,search_count_matches_between_api_and_ui.spec.js,search count matches between API and UI,passed,2545,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,api,06_contract,search_count_matches_between_api_and_ui.spec.js,search count matches between API and UI,passed,2889,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,api,07_negative,create_account_with_duplicate_email_returns_error.spec.js,create account with duplicate email returns error,passed,629,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,api,07_negative,create_account_with_duplicate_email_returns_error.spec.js,create account with duplicate email returns error,passed,352,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,api,07_negative,create_account_with_duplicate_email_returns_error.spec.js,create account with duplicate email returns error,passed,633,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,api,07_negative,get_user_with_missing_email_param_returns_400.spec.js,get user with missing email param returns 400,passed,277,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,api,07_negative,get_user_with_missing_email_param_returns_400.spec.js,get user with missing email param returns 400,passed,96,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,api,07_negative,get_user_with_missing_email_param_returns_400.spec.js,get user with missing email param returns 400,passed,271,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,e2e,,api_create_user_then_complete_ui_checkout.spec.js,api create user then complete ui checkout,passed,6772,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,e2e,,api_create_user_then_complete_ui_checkout.spec.js,api create user then complete ui checkout,passed,7686,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,e2e,,api_create_user_then_complete_ui_checkout.spec.js,api create user then complete ui checkout,passed,8043,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,e2e,,guest_browse_and_complete_full_purchase.spec.js,guest browse and complete full purchase,passed,8900,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,e2e,,guest_browse_and_complete_full_purchase.spec.js,guest browse and complete full purchase,passed,8147,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,e2e,,guest_browse_and_complete_full_purchase.spec.js,guest browse and complete full purchase,passed,7920,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,e2e,,register_login_search_and_buy_product.spec.js,register login search and buy product,passed,8454,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,e2e,,register_login_search_and_buy_product.spec.js,register login search and buy product,passed,9354,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,e2e,,register_login_search_and_buy_product.spec.js,register login search and buy product,passed,9872,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,e2e,,returning_user_reorders_from_existing_account.spec.js,returning user reorders from existing account,passed,11161,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,e2e,,returning_user_reorders_from_existing_account.spec.js,returning user reorders from existing account,passed,12444,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,e2e,,returning_user_reorders_from_existing_account.spec.js,returning user reorders from existing account,passed,12686,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,01_smoke,core_navigation_links_are_accessible.spec.js,"nav link ""Home"" resolves without error",passed,1142,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,01_smoke,core_navigation_links_are_accessible.spec.js,"nav link ""Products"" resolves without error",passed,1733,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,01_smoke,core_navigation_links_are_accessible.spec.js,"nav link ""Cart"" resolves without error",passed,963,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,01_smoke,core_navigation_links_are_accessible.spec.js,"nav link ""Login"" resolves without error",passed,807,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,01_smoke,core_navigation_links_are_accessible.spec.js,"nav link ""Home"" resolves without error",passed,1359,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,01_smoke,core_navigation_links_are_accessible.spec.js,"nav link ""Products"" resolves without error",passed,1323,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,01_smoke,core_navigation_links_are_accessible.spec.js,"nav link ""Cart"" resolves without error",passed,1028,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,01_smoke,core_navigation_links_are_accessible.spec.js,"nav link ""Login"" resolves without error",passed,940,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,01_smoke,core_navigation_links_are_accessible.spec.js,"nav link ""Home"" resolves without error",passed,1294,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,01_smoke,core_navigation_links_are_accessible.spec.js,"nav link ""Products"" resolves without error",passed,1541,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,01_smoke,core_navigation_links_are_accessible.spec.js,"nav link ""Cart"" resolves without error",passed,936,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,01_smoke,core_navigation_links_are_accessible.spec.js,"nav link ""Login"" resolves without error",passed,1083,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,01_smoke,homepage_loads_successfully.spec.js,homepage loads successfully,passed,888,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,01_smoke,homepage_loads_successfully.spec.js,homepage loads successfully,passed,1177,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,01_smoke,homepage_loads_successfully.spec.js,homepage loads successfully,passed,1235,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,02_auth,login_is_case_sensitive_for_email.spec.js,login is case sensitive for email,passed,1718,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,02_auth,login_is_case_sensitive_for_email.spec.js,login is case sensitive for email,passed,2092,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,02_auth,login_is_case_sensitive_for_email.spec.js,login is case sensitive for email,passed,1967,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,02_auth,login_password_field_masks_input.spec.js,login password field masks input,passed,769,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,02_auth,login_password_field_masks_input.spec.js,login password field masks input,passed,1203,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,02_auth,login_password_field_masks_input.spec.js,login password field masks input,passed,1061,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,02_auth,login_shows_error_for_unregistered_email.spec.js,login shows error for unregistered email,passed,1372,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,02_auth,login_shows_error_for_unregistered_email.spec.js,login shows error for unregistered email,passed,1327,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,02_auth,login_shows_error_for_unregistered_email.spec.js,login shows error for unregistered email,passed,1640,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,02_auth,login_shows_error_for_wrong_password.spec.js,login shows error for wrong password @TC03,passed,1560,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,02_auth,login_shows_error_for_wrong_password.spec.js,login shows error for wrong password @TC03,passed,1873,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,02_auth,login_shows_error_for_wrong_password.spec.js,login shows error for wrong password @TC03,passed,1642,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,02_auth,login_with_valid_credentials.spec.js,login with valid credentials @TC02,passed,2701,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,02_auth,login_with_valid_credentials.spec.js,login with valid credentials @TC02,passed,3134,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,02_auth,login_with_valid_credentials.spec.js,login with valid credentials @TC02,passed,2451,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,02_auth,logout_clears_session_on_back_navigation.spec.js,logout clears session on direct navigation,passed,3629,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,02_auth,logout_clears_session_on_back_navigation.spec.js,logout clears session on direct navigation,passed,4212,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,02_auth,logout_clears_session_on_back_navigation.spec.js,logout clears session on direct navigation,passed,4248,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,02_auth,logout_redirects_to_login_page.spec.js,logout redirects to login page @TC04,passed,3064,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,02_auth,logout_redirects_to_login_page.spec.js,logout redirects to login page @TC04,passed,3341,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,02_auth,logout_redirects_to_login_page.spec.js,logout redirects to login page @TC04,passed,3261,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,02_auth,register_shows_error_for_existing_email.spec.js,register shows error for existing email @TC05,passed,1325,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,02_auth,register_shows_error_for_existing_email.spec.js,register shows error for existing email @TC05,passed,2613,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,02_auth,register_shows_error_for_existing_email.spec.js,register shows error for existing email @TC05,passed,3867,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,02_auth,register_trims_whitespace_in_name_field.spec.js,register trims whitespace in name field,passed,2557,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,02_auth,register_trims_whitespace_in_name_field.spec.js,register trims whitespace in name field,passed,3592,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,02_auth,register_trims_whitespace_in_name_field.spec.js,register trims whitespace in name field,passed,3431,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,02_auth,register_with_missing_required_fields.spec.js,register with empty name shows no navigation,passed,970,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,02_auth,register_with_missing_required_fields.spec.js,register with empty email shows no navigation,passed,796,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,02_auth,register_with_missing_required_fields.spec.js,register with empty name shows no navigation,passed,1009,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,02_auth,register_with_missing_required_fields.spec.js,register with empty email shows no navigation,passed,931,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,02_auth,register_with_missing_required_fields.spec.js,register with empty name shows no navigation,passed,1209,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,02_auth,register_with_missing_required_fields.spec.js,register with empty email shows no navigation,passed,1101,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,02_auth,register_with_valid_new_user_data.spec.js,register with valid new user data @TC01,passed,3815,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,02_auth,register_with_valid_new_user_data.spec.js,register with valid new user data @TC01,passed,4464,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,02_auth,register_with_valid_new_user_data.spec.js,register with valid new user data @TC01,passed,3150,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,02_auth,authenticated_user_redirected_away_from_login.spec.js,authenticated user redirected away from login,passed,4241,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,02_auth,authenticated_user_redirected_away_from_login.spec.js,authenticated user redirected away from login,passed,4335,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,02_auth,authenticated_user_redirected_away_from_login.spec.js,authenticated user redirected away from login,passed,3894,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,02_auth,session_persists_after_page_reload.spec.js,session persists after page reload,passed,4047,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,02_auth,session_persists_after_page_reload.spec.js,session persists after page reload,passed,5492,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,02_auth,session_persists_after_page_reload.spec.js,session persists after page reload,passed,3814,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,03_contact,contact_form_accepts_file_upload.spec.js,contact form accepts file upload,passed,958,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,03_contact,contact_form_accepts_file_upload.spec.js,contact form accepts file upload,passed,1105,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,03_contact,contact_form_accepts_file_upload.spec.js,contact form accepts file upload,passed,1129,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,03_contact,submit_contact_form_with_valid_data.spec.js,submit contact form with valid data @TC06,passed,817,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,03_contact,submit_contact_form_with_valid_data.spec.js,submit contact form with valid data @TC06,passed,1566,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,03_contact,submit_contact_form_with_valid_data.spec.js,submit contact form with valid data @TC06,passed,1064,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,04_navigation,all_nav_links_resolve_without_404.spec.js,all nav links resolve without 404,passed,3968,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,04_navigation,all_nav_links_resolve_without_404.spec.js,all nav links resolve without 404,passed,3988,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,04_navigation,all_nav_links_resolve_without_404.spec.js,all nav links resolve without 404,passed,3538,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,04_navigation,test_cases_page_accessible_from_nav.spec.js,test cases page accessible from nav,passed,1786,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,04_navigation,test_cases_page_accessible_from_nav.spec.js,test cases page accessible from nav,passed,1793,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,04_navigation,test_cases_page_accessible_from_nav.spec.js,test cases page accessible from nav,passed,1760,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,05_products,brand_sidebar_lists_all_brands.spec.js,brand sidebar lists all brands,passed,1375,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,05_products,brand_sidebar_lists_all_brands.spec.js,brand sidebar lists all brands,passed,1194,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,05_products,brand_sidebar_lists_all_brands.spec.js,brand sidebar lists all brands,passed,1298,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,05_products,clicking_brand_filters_products_by_brand.spec.js,clicking brand filters products by brand,passed,1736,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,05_products,clicking_brand_filters_products_by_brand.spec.js,clicking brand filters products by brand,passed,1567,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,05_products,clicking_brand_filters_products_by_brand.spec.js,clicking brand filters products by brand,passed,1785,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,05_products,category_sidebar_filters_products_correctly.spec.js,category sidebar filters products correctly,passed,1754,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,05_products,category_sidebar_filters_products_correctly.spec.js,category sidebar filters products correctly,passed,1505,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,05_products,category_sidebar_filters_products_correctly.spec.js,category sidebar filters products correctly,passed,1804,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,05_products,subcategory_shows_correct_product_subset.spec.js,subcategory shows correct product subset,passed,2112,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,05_products,subcategory_shows_correct_product_subset.spec.js,subcategory shows correct product subset,passed,1645,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,05_products,subcategory_shows_correct_product_subset.spec.js,subcategory shows correct product subset,passed,1847,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,05_products,product_detail_shows_availability_and_condition.spec.js,product detail shows availability and condition,passed,1029,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,05_products,product_detail_shows_availability_and_condition.spec.js,product detail shows availability and condition,passed,1093,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,05_products,product_detail_shows_availability_and_condition.spec.js,product detail shows availability and condition,passed,1121,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,05_products,product_detail_shows_name_price_brand.spec.js,product detail shows name price and brand,passed,831,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,05_products,product_detail_shows_name_price_brand.spec.js,product detail shows name price and brand,passed,1042,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,05_products,product_detail_shows_name_price_brand.spec.js,product detail shows name price and brand,passed,909,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,05_products,all_products_page_displays_product_list.spec.js,all products page displays product list,passed,922,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,05_products,all_products_page_displays_product_list.spec.js,all products page displays product list,passed,1118,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,05_products,all_products_page_displays_product_list.spec.js,all products page displays product list,passed,1160,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,05_products,product_list_is_not_empty_on_load.spec.js,product list is not empty on load,passed,1028,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,05_products,product_list_is_not_empty_on_load.spec.js,product list is not empty on load,passed,1237,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,05_products,product_list_is_not_empty_on_load.spec.js,product list is not empty on load,passed,1157,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,05_products,add_recommended_item_to_cart_from_homepage.spec.js,add recommended item to cart from homepage,passed,11429,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,05_products,add_recommended_item_to_cart_from_homepage.spec.js,add recommended item to cart from homepage,passed,10836,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,05_products,add_recommended_item_to_cart_from_homepage.spec.js,add recommended item to cart from homepage,passed,9971,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,05_products,review_form_shows_error_for_missing_fields.spec.js,review form shows error for missing fields,passed,1011,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,05_products,review_form_shows_error_for_missing_fields.spec.js,review form shows error for missing fields,passed,1725,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,05_products,review_form_shows_error_for_missing_fields.spec.js,review form shows error for missing fields,passed,1138,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,05_products,submit_review_with_valid_name_and_email.spec.js,submit review with valid name and email,passed,913,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,05_products,submit_review_with_valid_name_and_email.spec.js,submit review with valid name and email,passed,1062,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,05_products,submit_review_with_valid_name_and_email.spec.js,submit review with valid name and email,passed,1174,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,05_products,search_returns_matching_products.spec.js,search returns matching products,passed,3259,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,05_products,search_returns_matching_products.spec.js,search returns matching products,passed,3770,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,05_products,search_returns_matching_products.spec.js,search returns matching products,passed,3638,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,05_products,search_with_empty_term_shows_all_or_message.spec.js,search with empty term shows all or message,passed,3609,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,05_products,search_with_empty_term_shows_all_or_message.spec.js,search with empty term shows all or message,passed,4038,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,05_products,search_with_empty_term_shows_all_or_message.spec.js,search with empty term shows all or message,passed,3747,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,05_products,search_with_sql_injection_does_not_crash.spec.js,search with sql injection does not crash,passed,2981,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,05_products,search_with_sql_injection_does_not_crash.spec.js,search with sql injection does not crash,passed,3654,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,05_products,search_with_sql_injection_does_not_crash.spec.js,search with sql injection does not crash,passed,3579,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,06_cart,add_multiple_different_products_to_cart.spec.js,add multiple different products to cart,passed,4157,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,06_cart,add_multiple_different_products_to_cart.spec.js,add multiple different products to cart,passed,4448,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,06_cart,add_multiple_different_products_to_cart.spec.js,add multiple different products to cart,passed,4776,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,06_cart,add_product_with_custom_quantity_from_detail.spec.js,add product with custom quantity from detail,passed,1858,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,06_cart,add_product_with_custom_quantity_from_detail.spec.js,add product with custom quantity from detail,passed,2032,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,06_cart,add_product_with_custom_quantity_from_detail.spec.js,add product with custom quantity from detail,passed,1975,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,06_cart,add_single_product_from_listing.spec.js,add single product from listing,passed,2462,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,06_cart,add_single_product_from_listing.spec.js,add single product from listing,passed,2516,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,06_cart,add_single_product_from_listing.spec.js,add single product from listing,passed,2633,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,06_cart,cart_badge_count_updates_without_page_reload.spec.js,cart badge count updates without page reload,passed,2240,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,06_cart,cart_badge_count_updates_without_page_reload.spec.js,cart badge count updates without page reload,passed,3100,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,06_cart,cart_badge_count_updates_without_page_reload.spec.js,cart badge count updates without page reload,passed,2485,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,06_cart,cart_is_empty_after_removing_only_item.spec.js,cart is empty after removing only item,passed,3243,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,06_cart,cart_is_empty_after_removing_only_item.spec.js,cart is empty after removing only item,passed,3451,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,06_cart,cart_is_empty_after_removing_only_item.spec.js,cart is empty after removing only item,passed,3809,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,06_cart,remove_product_from_cart.spec.js,remove product from cart,passed,3508,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,06_cart,remove_product_from_cart.spec.js,remove product from cart,passed,3585,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,06_cart,remove_product_from_cart.spec.js,remove product from cart,passed,3780,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,06_cart,same_product_added_twice_aggregates_quantity.spec.js,same product added twice aggregates quantity,passed,3080,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,06_cart,same_product_added_twice_aggregates_quantity.spec.js,same product added twice aggregates quantity,passed,4548,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,06_cart,same_product_added_twice_aggregates_quantity.spec.js,same product added twice aggregates quantity,passed,3350,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,06_cart,cart_contents_persist_after_page_reload.spec.js,cart contents persist after page reload,passed,3177,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,06_cart,cart_contents_persist_after_page_reload.spec.js,cart contents persist after page reload,passed,3689,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,06_cart,cart_contents_persist_after_page_reload.spec.js,cart contents persist after page reload,passed,3897,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,06_cart,guest_cart_persists_after_logging_in.spec.js,guest cart persists after logging in,passed,7142,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,06_cart,guest_cart_persists_after_logging_in.spec.js,guest cart persists after logging in,passed,6337,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,06_cart,guest_cart_persists_after_logging_in.spec.js,guest cart persists after logging in,passed,5579,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,06_cart,search_products_and_verify_cart_after_login.spec.js,search products and verify cart after login,passed,2957,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,06_cart,search_products_and_verify_cart_after_login.spec.js,search products and verify cart after login,passed,3758,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,06_cart,search_products_and_verify_cart_after_login.spec.js,search products and verify cart after login,passed,3136,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,06_cart,subscription_form_visible_in_cart_page_footer.spec.js,subscription form visible in cart page footer,passed,786,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,06_cart,subscription_form_visible_in_cart_page_footer.spec.js,subscription form visible in cart page footer,passed,1084,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,06_cart,subscription_form_visible_in_cart_page_footer.spec.js,subscription form visible in cart page footer,passed,1245,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,06_cart,subscription_form_visible_in_homepage_footer.spec.js,subscription form visible in homepage footer,passed,1077,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,06_cart,subscription_form_visible_in_homepage_footer.spec.js,subscription form visible in homepage footer,passed,1152,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,06_cart,subscription_form_visible_in_homepage_footer.spec.js,subscription form visible in homepage footer,passed,1408,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,06_cart,subscription_shows_error_for_invalid_email.spec.js,subscription shows error for invalid email,passed,1030,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,06_cart,subscription_shows_error_for_invalid_email.spec.js,subscription shows error for invalid email,passed,1335,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,06_cart,subscription_shows_error_for_invalid_email.spec.js,subscription shows error for invalid email,passed,1303,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,07_checkout,address_details_match_registered_user_data.spec.js,address details match registered user data,passed,5127,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,07_checkout,address_details_match_registered_user_data.spec.js,address details match registered user data,passed,5562,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,07_checkout,address_details_match_registered_user_data.spec.js,address details match registered user data,passed,5549,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,07_checkout,order_review_shows_correct_products_and_prices.spec.js,order review shows correct products and prices,passed,5490,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,07_checkout,order_review_shows_correct_products_and_prices.spec.js,order review shows correct products and prices,passed,6356,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,07_checkout,order_review_shows_correct_products_and_prices.spec.js,order review shows correct products and prices,passed,5580,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,07_checkout,download_invoice_after_successful_order.spec.js,download invoice after successful order,passed,8596,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,07_checkout,download_invoice_after_successful_order.spec.js,download invoice after successful order,passed,7336,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,07_checkout,download_invoice_after_successful_order.spec.js,download invoice after successful order,passed,8876,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,07_checkout,payment_blocked_for_empty_card_name.spec.js,payment blocked for empty card name,passed,7074,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,07_checkout,payment_blocked_for_empty_card_name.spec.js,payment blocked for empty card name,passed,6269,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,07_checkout,payment_blocked_for_empty_card_name.spec.js,payment blocked for empty card name,passed,6209,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,07_checkout,payment_blocked_for_non_numeric_card_number.spec.js,payment blocked for non numeric card number,passed,7015,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,07_checkout,payment_blocked_for_non_numeric_card_number.spec.js,payment blocked for non numeric card number,passed,8429,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,07_checkout,payment_blocked_for_non_numeric_card_number.spec.js,payment blocked for non numeric card number,passed,7921,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,07_checkout,payment_blocked_for_past_expiry_year.spec.js,payment blocked for past expiry year,passed,6476,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,07_checkout,payment_blocked_for_past_expiry_year.spec.js,payment blocked for past expiry year,passed,7394,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,07_checkout,payment_blocked_for_past_expiry_year.spec.js,payment blocked for past expiry year,passed,7062,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,07_checkout,payment_succeeds_with_valid_card_details.spec.js,payment succeeds with valid card details,passed,6794,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,07_checkout,payment_succeeds_with_valid_card_details.spec.js,payment succeeds with valid card details,passed,6803,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,07_checkout,payment_succeeds_with_valid_card_details.spec.js,payment succeeds with valid card details,passed,6960,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,07_checkout,place_order_by_logging_in_before_checkout.spec.js,place order by logging in before checkout,passed,9614,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,07_checkout,place_order_by_logging_in_before_checkout.spec.js,place order by logging in before checkout,passed,6439,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,07_checkout,place_order_by_logging_in_before_checkout.spec.js,place order by logging in before checkout,passed,6591,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,07_checkout,place_order_by_registering_before_checkout.spec.js,place order by registering before checkout,passed,8784,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,07_checkout,place_order_by_registering_before_checkout.spec.js,place order by registering before checkout,passed,7735,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,07_checkout,place_order_by_registering_before_checkout.spec.js,place order by registering before checkout,passed,6112,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,07_checkout,place_order_by_registering_during_checkout.spec.js,place order by registering during checkout,passed,8924,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,07_checkout,place_order_by_registering_during_checkout.spec.js,place order by registering during checkout,passed,10209,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,07_checkout,place_order_by_registering_during_checkout.spec.js,place order by registering during checkout,passed,8954,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,07_checkout,checkout_blocked_when_cart_is_empty.spec.js,checkout blocked when cart is empty,passed,5528,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,07_checkout,checkout_blocked_when_cart_is_empty.spec.js,checkout blocked when cart is empty,passed,3547,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,07_checkout,checkout_blocked_when_cart_is_empty.spec.js,checkout blocked when cart is empty,passed,3115,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,07_checkout,comment_field_sanitises_xss_input.spec.js,comment field sanitises xss input,passed,9311,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,07_checkout,comment_field_sanitises_xss_input.spec.js,comment field sanitises xss input,passed,6960,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,07_checkout,comment_field_sanitises_xss_input.spec.js,comment field sanitises xss input,passed,8218,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,08_scroll,scroll_up_using_arrow_button_returns_to_top.spec.js,scroll up using arrow button returns to top,passed,1645,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,08_scroll,scroll_up_using_arrow_button_returns_to_top.spec.js,scroll up using arrow button returns to top,passed,1917,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,08_scroll,scroll_up_using_arrow_button_returns_to_top.spec.js,scroll up using arrow button returns to top,passed,1727,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,08_scroll,scroll_up_without_arrow_returns_to_top.spec.js,scroll up without arrow returns to top,passed,1186,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,08_scroll,scroll_up_without_arrow_returns_to_top.spec.js,scroll up without arrow returns to top,passed,1575,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,08_scroll,scroll_up_without_arrow_returns_to_top.spec.js,scroll up without arrow returns to top,passed,1780,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,09_network,login_form_sends_correct_fields_in_request_body.spec.js,login form sends correct fields in request body,passed,1523,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,09_network,login_form_sends_correct_fields_in_request_body.spec.js,login form sends correct fields in request body,passed,1680,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,09_network,login_form_sends_correct_fields_in_request_body.spec.js,login form sends correct fields in request body,passed,1347,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,09_network,search_request_contains_correct_query_parameter.spec.js,search request contains correct query parameter,passed,2913,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,09_network,search_request_contains_correct_query_parameter.spec.js,search request contains correct query parameter,passed,4202,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,09_network,search_request_contains_correct_query_parameter.spec.js,search request contains correct query parameter,passed,2979,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,09_network,login_ui_handles_server_500_without_crash.spec.js,login ui handles server 500 without crash,passed,960,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,09_network,login_ui_handles_server_500_without_crash.spec.js,login ui handles server 500 without crash,passed,1275,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,09_network,login_ui_handles_server_500_without_crash.spec.js,login ui handles server 500 without crash,passed,1015,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,09_network,page_recovers_gracefully_when_product_api_fails.spec.js,page recovers gracefully when product api fails,passed,918,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,09_network,page_recovers_gracefully_when_product_api_fails.spec.js,page recovers gracefully when product api fails,passed,1405,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,09_network,page_recovers_gracefully_when_product_api_fails.spec.js,page recovers gracefully when product api fails,passed,1290,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,09_network,product_listing_renders_with_stubbed_api_response.spec.js,product listing renders with stubbed api response,passed,1097,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,09_network,product_listing_renders_with_stubbed_api_response.spec.js,product listing renders with stubbed api response,passed,1079,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,ui,09_network,product_listing_renders_with_stubbed_api_response.spec.js,product listing renders with stubbed api response,passed,1055,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,visual,components,cart_modal_visual_snapshot.spec.js,cart modal visual snapshot,passed,2669,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,visual,components,cart_modal_visual_snapshot.spec.js,cart modal visual snapshot,passed,2239,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,visual,components,cart_modal_visual_snapshot.spec.js,cart modal visual snapshot,failed,2919,0,automationexercise-webkit,"Error: expect(locator).toHaveScreenshot(expected) failed
+
+Locator: locator('#cartModal .modal-content')
+  Expected an image 326px by 316px, received 326px by 317px. 
+
+  Snapshot: cart-modal.png
+
+Call log:
+  - Expect ""toHaveScreenshot(cart-modal.png)"" with timeout 10000ms
+    - verifying given screenshot expectation
+  - waiting for locator('#cartModal .modal-content')
+    - locator resolved to <div class=""modal-content"">…</div>
+  - taking element screenshot
+    - disabled all CSS animations
+  - waiting for fonts to load...
+  - fonts loaded
+  - attempting scroll into view action
+    - waiting for element to be stable
+  - Expected an image 326px by 316px, received 326px by 317px.
+  - waiting 100ms before taking screenshot
+  - waiting for locator('#cartModal .modal-content')
+    - locator resolved to <div class=""modal-content"">…</div>
+  - taking element screenshot
+    - disabled all CSS animations
+  - waiting for fonts to load...
+  - fonts loaded
+  - attempting scroll into view action
+    - waiting for element to be stable
+  - captured a stable screenshot
+  - Expected an image 326px by 316px, received 326px by 317px.
+
+
+  11 |   // Screenshot the modal dialog only (not the full-screen backdrop, which shows
+  12 |   // dynamic ad content and causes pixel churn between runs).
+> 13 |   await expect(page.locator('#cartModal .modal-content')).toHaveScreenshot('cart-modal.png', {
+     |                                                           ^
+  14 |     // Allow up to 5% for sub-pixel font anti-aliasing differences across browsers.
+  15 |     maxDiffPixelRatio: 0.05,
+  16 |   });
+    at /Users/ntmurray/Documents/Coding/qa_wolf_take_home/linfeng_framework_tests/automationexercise/tests/visual/components/cart_modal_visual_snapshot.spec.js:13:59",/Users/ntmurray/Documents/Coding/qa_wolf_take_home/linfeng_framework_tests/automationexercise/tests/visual/components/cart_modal_visual_snapshot.spec.js:13
+2026-04-10T23:47:44.505Z,automationexercise,visual,components,cart_modal_visual_snapshot.spec.js,cart modal visual snapshot,failed,2798,1,automationexercise-webkit,"Error: expect(locator).toHaveScreenshot(expected) failed
+
+Locator: locator('#cartModal .modal-content')
+  Expected an image 326px by 316px, received 326px by 317px. 
+
+  Snapshot: cart-modal.png
+
+Call log:
+  - Expect ""toHaveScreenshot(cart-modal.png)"" with timeout 10000ms
+    - verifying given screenshot expectation
+  - waiting for locator('#cartModal .modal-content')
+    - locator resolved to <div class=""modal-content"">…</div>
+  - taking element screenshot
+    - disabled all CSS animations
+  - waiting for fonts to load...
+  - fonts loaded
+  - attempting scroll into view action
+    - waiting for element to be stable
+  - Expected an image 326px by 316px, received 326px by 317px.
+  - waiting 100ms before taking screenshot
+  - waiting for locator('#cartModal .modal-content')
+    - locator resolved to <div class=""modal-content"">…</div>
+  - taking element screenshot
+    - disabled all CSS animations
+  - waiting for fonts to load...
+  - fonts loaded
+  - attempting scroll into view action
+    - waiting for element to be stable
+  - captured a stable screenshot
+  - Expected an image 326px by 316px, received 326px by 317px.
+
+
+  11 |   // Screenshot the modal dialog only (not the full-screen backdrop, which shows
+  12 |   // dynamic ad content and causes pixel churn between runs).
+> 13 |   await expect(page.locator('#cartModal .modal-content')).toHaveScreenshot('cart-modal.png', {
+     |                                                           ^
+  14 |     // Allow up to 5% for sub-pixel font anti-aliasing differences across browsers.
+  15 |     maxDiffPixelRatio: 0.05,
+  16 |   });
+    at /Users/ntmurray/Documents/Coding/qa_wolf_take_home/linfeng_framework_tests/automationexercise/tests/visual/components/cart_modal_visual_snapshot.spec.js:13:59",/Users/ntmurray/Documents/Coding/qa_wolf_take_home/linfeng_framework_tests/automationexercise/tests/visual/components/cart_modal_visual_snapshot.spec.js:13
+2026-04-10T23:47:44.505Z,automationexercise,visual,components,header_visual_snapshot.spec.js,header visual snapshot,passed,1198,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,visual,components,header_visual_snapshot.spec.js,header visual snapshot,passed,1295,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,visual,components,header_visual_snapshot.spec.js,header visual snapshot,passed,1365,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,visual,pages,homepage_visual_snapshot.spec.js,homepage visual snapshot,passed,1353,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,visual,pages,homepage_visual_snapshot.spec.js,homepage visual snapshot,passed,1196,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,visual,pages,homepage_visual_snapshot.spec.js,homepage visual snapshot,passed,2208,0,automationexercise-webkit,,
+2026-04-10T23:47:44.505Z,automationexercise,visual,pages,product_detail_visual_snapshot.spec.js,product detail visual snapshot,passed,1204,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,visual,pages,product_detail_visual_snapshot.spec.js,product detail visual snapshot,passed,1644,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,visual,pages,product_detail_visual_snapshot.spec.js,product detail visual snapshot,failed,2034,0,automationexercise-webkit,"Error: expect(locator).toHaveScreenshot(expected) failed
+
+Locator: locator('.product-information')
+  Expected an image 474px by 350px, received 474px by 351px. 
+
+  Snapshot: product-detail.png
+
+Call log:
+  - Expect ""toHaveScreenshot(product-detail.png)"" with timeout 10000ms
+    - verifying given screenshot expectation
+  - waiting for locator('.product-information')
+    - locator resolved to <div class=""product-information"">…</div>
+  - taking element screenshot
+    - disabled all CSS animations
+  - waiting for fonts to load...
+  - fonts loaded
+  - attempting scroll into view action
+    - waiting for element to be stable
+  - Expected an image 474px by 350px, received 474px by 351px.
+  - waiting 100ms before taking screenshot
+  - waiting for locator('.product-information')
+    - locator resolved to <div class=""product-information"">…</div>
+  - taking element screenshot
+    - disabled all CSS animations
+  - waiting for fonts to load...
+  - fonts loaded
+  - attempting scroll into view action
+    - waiting for element to be stable
+  - captured a stable screenshot
+  - Expected an image 474px by 350px, received 474px by 351px.
+
+
+   9 |   // never covered by ad overlays, unlike the full-page which is polluted by
+  10 |   // unpredictable video/modal ad units that appear at different times per run.
+> 11 |   await expect(page.locator('.product-information')).toHaveScreenshot('product-detail.png', {
+     |                                                      ^
+  12 |     maxDiffPixelRatio: 0.03,
+  13 |   });
+  14 | });
+    at /Users/ntmurray/Documents/Coding/qa_wolf_take_home/linfeng_framework_tests/automationexercise/tests/visual/pages/product_detail_visual_snapshot.spec.js:11:54",/Users/ntmurray/Documents/Coding/qa_wolf_take_home/linfeng_framework_tests/automationexercise/tests/visual/pages/product_detail_visual_snapshot.spec.js:11
+2026-04-10T23:47:44.505Z,automationexercise,visual,pages,product_detail_visual_snapshot.spec.js,product detail visual snapshot,failed,2016,1,automationexercise-webkit,"Error: expect(locator).toHaveScreenshot(expected) failed
+
+Locator: locator('.product-information')
+  Expected an image 474px by 350px, received 474px by 351px. 
+
+  Snapshot: product-detail.png
+
+Call log:
+  - Expect ""toHaveScreenshot(product-detail.png)"" with timeout 10000ms
+    - verifying given screenshot expectation
+  - waiting for locator('.product-information')
+    - locator resolved to <div class=""product-information"">…</div>
+  - taking element screenshot
+    - disabled all CSS animations
+  - waiting for fonts to load...
+  - fonts loaded
+  - attempting scroll into view action
+    - waiting for element to be stable
+  - Expected an image 474px by 350px, received 474px by 351px.
+  - waiting 100ms before taking screenshot
+  - waiting for locator('.product-information')
+    - locator resolved to <div class=""product-information"">…</div>
+  - taking element screenshot
+    - disabled all CSS animations
+  - waiting for fonts to load...
+  - fonts loaded
+  - attempting scroll into view action
+    - waiting for element to be stable
+  - captured a stable screenshot
+  - Expected an image 474px by 350px, received 474px by 351px.
+
+
+   9 |   // never covered by ad overlays, unlike the full-page which is polluted by
+  10 |   // unpredictable video/modal ad units that appear at different times per run.
+> 11 |   await expect(page.locator('.product-information')).toHaveScreenshot('product-detail.png', {
+     |                                                      ^
+  12 |     maxDiffPixelRatio: 0.03,
+  13 |   });
+  14 | });
+    at /Users/ntmurray/Documents/Coding/qa_wolf_take_home/linfeng_framework_tests/automationexercise/tests/visual/pages/product_detail_visual_snapshot.spec.js:11:54",/Users/ntmurray/Documents/Coding/qa_wolf_take_home/linfeng_framework_tests/automationexercise/tests/visual/pages/product_detail_visual_snapshot.spec.js:11
+2026-04-10T23:47:44.505Z,automationexercise,visual,pages,products_page_visual_snapshot.spec.js,products page visual snapshot,passed,1231,0,automationexercise,,
+2026-04-10T23:47:44.505Z,automationexercise,visual,pages,products_page_visual_snapshot.spec.js,products page visual snapshot,passed,1291,0,automationexercise-firefox,,
+2026-04-10T23:47:44.505Z,automationexercise,visual,pages,products_page_visual_snapshot.spec.js,products page visual snapshot,passed,1279,0,automationexercise-webkit,,

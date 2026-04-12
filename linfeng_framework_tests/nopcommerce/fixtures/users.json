@@ -1,0 +1,21 @@
+{
+  "validUser": {
+    "gender": "female",
+    "firstName": "LinFeng",
+    "lastName": "Test",
+    "email": "linfeng_test_qa@example.com",
+    "password": "Password123!",
+    "confirmPassword": "Password123!"
+  },
+  "invalidEmailUser": {
+    "email": "invalid-email",
+    "password": "Password123!"
+  },
+  "unregisteredUser": {
+    "email": "unregistered_99999@example.com",
+    "password": "Password123!"
+  },
+  "validRecoveryUser": {
+    "email": "linfeng_test_qa@example.com"
+  }
+}
