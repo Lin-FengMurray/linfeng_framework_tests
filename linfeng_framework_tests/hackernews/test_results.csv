@@ -1,6 +1,22 @@
 run_timestamp,suite,section,subfolder,file,test_title,status,duration_ms,retry,browser,error_message,error_location
 
-2026-04-12T01:06:55.532Z,unknown,01_takehome_task_sorted_articles,,100_articles_sorted_newest_to_oldest.spec.js,100 articles from the newest page are sorted newest to oldest,failed,16740,0,hackernews,"TimeoutError: locator.waitFor: Timeout 15000ms exceeded.
+2026-04-12T01:14:18.452Z,unknown,01_takehome_task_sorted_articles,,100_articles_sorted_newest_to_oldest.spec.js,100 articles from the newest page are sorted newest to oldest,failed,16089,0,hackernews,"TimeoutError: locator.waitFor: Timeout 15000ms exceeded.
+Call log:
+  - waiting for locator('.athing').first() to be visible
+
+
+   at hackernews/pages/HackerNewsPage.js:17
+
+  15 |       timeout: 60000
+  16 |     });
+> 17 |     await this.articleRows.first().waitFor({ state: 'visible' });
+     |                                    ^
+  18 |   }
+  19 |
+  20 |   async getTopTimestamps(limit) {
+    at HackerNewsPage.navigate (/home/runner/work/linfeng_framework_tests/linfeng_framework_tests/linfeng_framework_tests/hackernews/pages/HackerNewsPage.js:17:36)
+    at /home/runner/work/linfeng_framework_tests/linfeng_framework_tests/linfeng_framework_tests/hackernews/tests/01_takehome_task_sorted_articles/100_articles_sorted_newest_to_oldest.spec.js:9:5",/home/runner/work/linfeng_framework_tests/linfeng_framework_tests/linfeng_framework_tests/hackernews/pages/HackerNewsPage.js:17
+2026-04-12T01:14:18.452Z,unknown,01_takehome_task_sorted_articles,,100_articles_sorted_newest_to_oldest.spec.js,100 articles from the newest page are sorted newest to oldest,failed,16824,1,hackernews,"TimeoutError: locator.waitFor: Timeout 15000ms exceeded.
 Call log:
   - waiting for locator('.athing').first() to be visible
 
@@ -16,74 +32,27 @@ Call log:
   42 |     return allTimes.slice(0, limit);
     at HackerNewsPage.getTopTimestamps (/home/runner/work/linfeng_framework_tests/linfeng_framework_tests/linfeng_framework_tests/hackernews/pages/HackerNewsPage.js:39:40)
     at /home/runner/work/linfeng_framework_tests/linfeng_framework_tests/linfeng_framework_tests/hackernews/tests/01_takehome_task_sorted_articles/100_articles_sorted_newest_to_oldest.spec.js:11:24",/home/runner/work/linfeng_framework_tests/linfeng_framework_tests/linfeng_framework_tests/hackernews/pages/HackerNewsPage.js:39
-2026-04-12T01:06:55.532Z,unknown,01_takehome_task_sorted_articles,,100_articles_sorted_newest_to_oldest.spec.js,100 articles from the newest page are sorted newest to oldest,passed,1497,1,hackernews,,
-2026-04-12T01:06:55.532Z,unknown,02_homepage,content,first_post_displays_with_rank_and_link.spec.js,first post is displayed with a rank and a link,passed,623,0,hackernews,,
-2026-04-12T01:06:55.532Z,unknown,02_homepage,content,rank_numbers_increase_sequentially.spec.js,rank numbers on the homepage increase sequentially,passed,552,0,hackernews,,
-2026-04-12T01:06:55.532Z,unknown,02_homepage,header,header_navigation_links_visible.spec.js,all header navigation links are visible,passed,685,0,hackernews,,
-2026-04-12T01:06:55.532Z,unknown,02_homepage,navigation,post_and_comments_links_navigate_correctly.spec.js,post link navigates to the article and comments link navigates to discussion,passed,1559,0,hackernews,,
-2026-04-12T01:06:55.532Z,unknown,03_pagination,,more_link_loads_next_page.spec.js,"""More"" link loads additional posts with higher rank numbers",passed,704,0,hackernews,,
-2026-04-12T01:06:55.532Z,unknown,03_pagination,,page_rank_increases_on_more_click.spec.js,"page rank increases with each click of the ""More"" button",failed,17142,0,hackernews,"TimeoutError: locator.innerText: Timeout 15000ms exceeded.
-Call log:
-  - waiting for locator('.rank').first()
-
-
-   at hackernews/pages/HackerNewsPage.js:46
-
-  44 |
-  45 |   async getFirstRankNumber() {
-> 46 |     const text = await this.firstRank.innerText();
-     |                                       ^
-  47 |     return parseInt(text.replace('.', ''));
-  48 |   }
-  49 |
-    at HackerNewsPage.getFirstRankNumber (/home/runner/work/linfeng_framework_tests/linfeng_framework_tests/linfeng_framework_tests/hackernews/pages/HackerNewsPage.js:46:39)
-    at /home/runner/work/linfeng_framework_tests/linfeng_framework_tests/linfeng_framework_tests/hackernews/tests/03_pagination/page_rank_increases_on_more_click.spec.js:15:34",/home/runner/work/linfeng_framework_tests/linfeng_framework_tests/linfeng_framework_tests/hackernews/pages/HackerNewsPage.js:46
-2026-04-12T01:06:55.532Z,unknown,03_pagination,,page_rank_increases_on_more_click.spec.js,"page rank increases with each click of the ""More"" button",failed,17149,1,hackernews,"TimeoutError: locator.innerText: Timeout 15000ms exceeded.
-Call log:
-  - waiting for locator('.rank').first()
-
-
-   at hackernews/pages/HackerNewsPage.js:46
-
-  44 |
-  45 |   async getFirstRankNumber() {
-> 46 |     const text = await this.firstRank.innerText();
-     |                                       ^
-  47 |     return parseInt(text.replace('.', ''));
-  48 |   }
-  49 |
-    at HackerNewsPage.getFirstRankNumber (/home/runner/work/linfeng_framework_tests/linfeng_framework_tests/linfeng_framework_tests/hackernews/pages/HackerNewsPage.js:46:39)
-    at /home/runner/work/linfeng_framework_tests/linfeng_framework_tests/linfeng_framework_tests/hackernews/tests/03_pagination/page_rank_increases_on_more_click.spec.js:15:34",/home/runner/work/linfeng_framework_tests/linfeng_framework_tests/linfeng_framework_tests/hackernews/pages/HackerNewsPage.js:46
-2026-04-12T01:06:55.532Z,unknown,03_pagination,,page_rank_increases_on_more_click.spec.js,"page rank increases with each click of the ""More"" button",failed,16882,2,hackernews,"TimeoutError: locator.innerText: Timeout 15000ms exceeded.
-Call log:
-  - waiting for locator('.rank').first()
-
-
-   at hackernews/pages/HackerNewsPage.js:46
-
-  44 |
-  45 |   async getFirstRankNumber() {
-> 46 |     const text = await this.firstRank.innerText();
-     |                                       ^
-  47 |     return parseInt(text.replace('.', ''));
-  48 |   }
-  49 |
-    at HackerNewsPage.getFirstRankNumber (/home/runner/work/linfeng_framework_tests/linfeng_framework_tests/linfeng_framework_tests/hackernews/pages/HackerNewsPage.js:46:39)
-    at /home/runner/work/linfeng_framework_tests/linfeng_framework_tests/linfeng_framework_tests/hackernews/tests/03_pagination/page_rank_increases_on_more_click.spec.js:15:34",/home/runner/work/linfeng_framework_tests/linfeng_framework_tests/linfeng_framework_tests/hackernews/pages/HackerNewsPage.js:46
-2026-04-12T01:06:55.532Z,unknown,04_past_page,back_navigation,go_back_a_day.spec.js,navigating back a day changes the date in the URL,passed,774,0,hackernews,,
-2026-04-12T01:06:55.532Z,unknown,04_past_page,back_navigation,go_back_a_month.spec.js,navigating back a month changes the date in the URL,passed,658,0,hackernews,,
-2026-04-12T01:06:55.532Z,unknown,04_past_page,back_navigation,go_back_a_year.spec.js,navigating back a year changes the date in the URL,passed,697,0,hackernews,,
-2026-04-12T01:06:55.532Z,unknown,04_past_page,forward_navigation,go_forward_a_day.spec.js,navigating forward a day changes the date in the URL,passed,655,0,hackernews,,
-2026-04-12T01:06:55.532Z,unknown,04_past_page,forward_navigation,go_forward_a_month.spec.js,navigating forward a month changes the date in the URL,passed,531,0,hackernews,,
-2026-04-12T01:06:55.532Z,unknown,04_past_page,forward_navigation,go_forward_a_year.spec.js,navigating forward a year changes the date in the URL,passed,519,0,hackernews,,
-2026-04-12T01:06:55.532Z,unknown,05_comments_page,functionality,comments_sorted_by_most_recent.spec.js,comments are sorted from most recent to oldest,passed,595,0,hackernews,,
-2026-04-12T01:06:55.532Z,unknown,05_comments_page,functionality,page_displays_comments.spec.js,"page loads and displays authors, comments, timestamps, and comment text",passed,536,0,hackernews,,
-2026-04-12T01:06:55.532Z,unknown,05_comments_page,navigation,author_name_navigates_to_profile.spec.js,clicking the author name navigates to the author profile page,passed,640,0,hackernews,,
-2026-04-12T01:06:55.532Z,unknown,05_comments_page,navigation,more_button_loads_next_page.spec.js,"""More"" button navigates to the next page of comments",passed,709,0,hackernews,,
-2026-04-12T01:06:55.532Z,unknown,06_ask_page,functionality,ranks_increase_sequentially.spec.js,rank numbers on the ask page increase sequentially,passed,545,0,hackernews,,
-2026-04-12T01:06:55.532Z,unknown,06_ask_page,functionality,scores_formatted_correctly.spec.js,story scores on the ask page are numeric and formatted correctly,passed,518,0,hackernews,,
-2026-04-12T01:06:55.532Z,unknown,06_ask_page,functionality,stories_render_correctly.spec.js,"ask page stories render with title, rank, score, and author visible",passed,646,0,hackernews,,
-2026-04-12T01:06:55.532Z,unknown,06_ask_page,navigation,author_click_navigates_to_profile.spec.js,clicking the author name navigates to the author profile page,failed,11166,0,hackernews,"Error: expect(locator).toContainText(expected) failed
+2026-04-12T01:14:18.452Z,unknown,01_takehome_task_sorted_articles,,100_articles_sorted_newest_to_oldest.spec.js,100 articles from the newest page are sorted newest to oldest,passed,1257,2,hackernews,,
+2026-04-12T01:14:18.452Z,unknown,02_homepage,content,first_post_displays_with_rank_and_link.spec.js,first post is displayed with a rank and a link,passed,473,0,hackernews,,
+2026-04-12T01:14:18.452Z,unknown,02_homepage,content,rank_numbers_increase_sequentially.spec.js,rank numbers on the homepage increase sequentially,passed,506,0,hackernews,,
+2026-04-12T01:14:18.452Z,unknown,02_homepage,header,header_navigation_links_visible.spec.js,all header navigation links are visible,passed,534,0,hackernews,,
+2026-04-12T01:14:18.452Z,unknown,02_homepage,navigation,post_and_comments_links_navigate_correctly.spec.js,post link navigates to the article and comments link navigates to discussion,passed,1525,0,hackernews,,
+2026-04-12T01:14:18.452Z,unknown,03_pagination,,more_link_loads_next_page.spec.js,"""More"" link loads additional posts with higher rank numbers",passed,673,0,hackernews,,
+2026-04-12T01:14:18.452Z,unknown,03_pagination,,page_rank_increases_on_more_click.spec.js,"page rank increases with each click of the ""More"" button",passed,1212,0,hackernews,,
+2026-04-12T01:14:18.452Z,unknown,04_past_page,back_navigation,go_back_a_day.spec.js,navigating back a day changes the date in the URL,passed,623,0,hackernews,,
+2026-04-12T01:14:18.452Z,unknown,04_past_page,back_navigation,go_back_a_month.spec.js,navigating back a month changes the date in the URL,passed,602,0,hackernews,,
+2026-04-12T01:14:18.452Z,unknown,04_past_page,back_navigation,go_back_a_year.spec.js,navigating back a year changes the date in the URL,passed,593,0,hackernews,,
+2026-04-12T01:14:18.452Z,unknown,04_past_page,forward_navigation,go_forward_a_day.spec.js,navigating forward a day changes the date in the URL,passed,603,0,hackernews,,
+2026-04-12T01:14:18.452Z,unknown,04_past_page,forward_navigation,go_forward_a_month.spec.js,navigating forward a month changes the date in the URL,passed,587,0,hackernews,,
+2026-04-12T01:14:18.452Z,unknown,04_past_page,forward_navigation,go_forward_a_year.spec.js,navigating forward a year changes the date in the URL,passed,473,0,hackernews,,
+2026-04-12T01:14:18.452Z,unknown,05_comments_page,functionality,comments_sorted_by_most_recent.spec.js,comments are sorted from most recent to oldest,passed,548,0,hackernews,,
+2026-04-12T01:14:18.452Z,unknown,05_comments_page,functionality,page_displays_comments.spec.js,"page loads and displays authors, comments, timestamps, and comment text",passed,518,0,hackernews,,
+2026-04-12T01:14:18.452Z,unknown,05_comments_page,navigation,author_name_navigates_to_profile.spec.js,clicking the author name navigates to the author profile page,passed,555,0,hackernews,,
+2026-04-12T01:14:18.452Z,unknown,05_comments_page,navigation,more_button_loads_next_page.spec.js,"""More"" button navigates to the next page of comments",passed,664,0,hackernews,,
+2026-04-12T01:14:18.452Z,unknown,06_ask_page,functionality,ranks_increase_sequentially.spec.js,rank numbers on the ask page increase sequentially,passed,448,0,hackernews,,
+2026-04-12T01:14:18.452Z,unknown,06_ask_page,functionality,scores_formatted_correctly.spec.js,story scores on the ask page are numeric and formatted correctly,passed,499,0,hackernews,,
+2026-04-12T01:14:18.452Z,unknown,06_ask_page,functionality,stories_render_correctly.spec.js,"ask page stories render with title, rank, score, and author visible",passed,450,0,hackernews,,
+2026-04-12T01:14:18.452Z,unknown,06_ask_page,navigation,author_click_navigates_to_profile.spec.js,clicking the author name navigates to the author profile page,failed,11252,0,hackernews,"Error: expect(locator).toContainText(expected) failed
 
 Locator: locator('body')
 Expected substring: ""davidajackson""
@@ -105,58 +74,32 @@ Call log:
   16 | });
   17 |
     at /home/runner/work/linfeng_framework_tests/linfeng_framework_tests/linfeng_framework_tests/hackernews/tests/06_ask_page/navigation/author_click_navigates_to_profile.spec.js:14:40",/home/runner/work/linfeng_framework_tests/linfeng_framework_tests/linfeng_framework_tests/hackernews/tests/06_ask_page/navigation/author_click_navigates_to_profile.spec.js:14
-2026-04-12T01:06:55.532Z,unknown,06_ask_page,navigation,author_click_navigates_to_profile.spec.js,clicking the author name navigates to the author profile page,passed,795,1,hackernews,,
-2026-04-12T01:06:55.532Z,unknown,06_ask_page,navigation,comments_link_opens_discussion.spec.js,clicking the comments link opens the discussion page,passed,650,0,hackernews,,
-2026-04-12T01:06:55.532Z,unknown,07_show_page,functionality,ranks_increase_sequentially.spec.js,rank numbers on the show page increase sequentially,passed,604,0,hackernews,,
-2026-04-12T01:06:55.532Z,unknown,07_show_page,functionality,scores_formatted_correctly.spec.js,story scores on the show page are numeric and formatted correctly,passed,551,0,hackernews,,
-2026-04-12T01:06:55.532Z,unknown,07_show_page,functionality,stories_render_correctly.spec.js,"show page stories render with title, rank, score, and author visible",passed,588,0,hackernews,,
-2026-04-12T01:06:55.532Z,unknown,07_show_page,navigation,article_title_redirects_outside_hn.spec.js,clicking the article title redirects to an external site outside Hacker News,passed,783,0,hackernews,,
-2026-04-12T01:06:55.532Z,unknown,07_show_page,navigation,comments_link_navigates_to_discussion.spec.js,clicking the comments link navigates to the article discussion page,passed,834,0,hackernews,,
-2026-04-12T01:06:55.532Z,unknown,07_show_page,navigation,more_button_loads_next_page.spec.js,"clicking the ""More"" button navigates to the next page of show stories",failed,16314,0,hackernews,"TimeoutError: locator.innerText: Timeout 15000ms exceeded.
-Call log:
-  - waiting for locator('.athing').locator('.titleline a').first()
-
-
-  14 |     await expect(page).toHaveURL(/show\?p=/);
-  15 |
-> 16 |     const firstTitleAfter = await titles.first().innerText();
-     |                                                  ^
-  17 |     expect(firstTitleAfter).not.toEqual(firstTitleBefore);
-  18 |   });
-  19 | });
-    at /home/runner/work/linfeng_framework_tests/linfeng_framework_tests/linfeng_framework_tests/hackernews/tests/07_show_page/navigation/more_button_loads_next_page.spec.js:16:50",/home/runner/work/linfeng_framework_tests/linfeng_framework_tests/linfeng_framework_tests/hackernews/tests/07_show_page/navigation/more_button_loads_next_page.spec.js:16
-2026-04-12T01:06:55.532Z,unknown,07_show_page,navigation,more_button_loads_next_page.spec.js,"clicking the ""More"" button navigates to the next page of show stories",failed,16477,1,hackernews,"TimeoutError: locator.innerText: Timeout 15000ms exceeded.
-Call log:
-  - waiting for locator('.athing').locator('.titleline a').first()
-
-
-  14 |     await expect(page).toHaveURL(/show\?p=/);
-  15 |
-> 16 |     const firstTitleAfter = await titles.first().innerText();
-     |                                                  ^
-  17 |     expect(firstTitleAfter).not.toEqual(firstTitleBefore);
-  18 |   });
-  19 | });
-    at /home/runner/work/linfeng_framework_tests/linfeng_framework_tests/linfeng_framework_tests/hackernews/tests/07_show_page/navigation/more_button_loads_next_page.spec.js:16:50",/home/runner/work/linfeng_framework_tests/linfeng_framework_tests/linfeng_framework_tests/hackernews/tests/07_show_page/navigation/more_button_loads_next_page.spec.js:16
-2026-04-12T01:06:55.532Z,unknown,07_show_page,navigation,more_button_loads_next_page.spec.js,"clicking the ""More"" button navigates to the next page of show stories",passed,803,2,hackernews,,
-2026-04-12T01:06:55.532Z,unknown,07_show_page,navigation,rules_tips_and_newest_links_redirect_correctly.spec.js,"""rules"", ""tips"", and ""newest Show HN"" links redirect to the correct pages",passed,998,0,hackernews,,
-2026-04-12T01:06:55.532Z,unknown,08_jobs_page,hn_jobs,first_job_listing_works_correctly.spec.js,first job listing opens company profile and job page correctly,passed,6565,0,hackernews,,
-2026-04-12T01:06:55.532Z,unknown,08_jobs_page,hn_jobs,hn_jobs_page_loads_and_yc_link_navigates.spec.js,HN Jobs page loads and the YC Jobs link is visible and navigates correctly,passed,1956,0,hackernews,,
-2026-04-12T01:06:55.532Z,unknown,08_jobs_page,hn_jobs,yc_jobs_page_loads_core_elements.spec.js,"YC Jobs page loads with the correct title and a ""Find a job"" button",passed,2262,0,hackernews,,
-2026-04-12T01:06:55.532Z,unknown,08_jobs_page,yc_jobs,footer_social_media_links_valid.spec.js,footer social media links are visible and point to the correct URLs,passed,2071,0,hackernews,,
-2026-04-12T01:06:55.532Z,unknown,08_jobs_page,yc_jobs,role_filters_update_listings.spec.js,all job role filters update the page so that only jobs of that role are listed,passed,7290,0,hackernews,,
-2026-04-12T01:06:55.532Z,unknown,08_jobs_page,yc_jobs,video_carousel_loads.spec.js,the YC Jobs video carousel loads with slides and clicking a slide navigates to the library,passed,2818,0,hackernews,,
-2026-04-12T01:06:55.532Z,unknown,09_footer,,footer_links_valid.spec.js,all footer links are visible and point to the correct URLs,passed,665,0,hackernews,,
-2026-04-12T01:06:55.532Z,unknown,10_search,,search_input_type_attribute_is_search.spec.js,the search input has the correct ARIA type attribute for accessibility,passed,722,0,hackernews,,
-2026-04-12T01:06:55.532Z,unknown,10_search,,search_redirects_to_algolia.spec.js,the search tool at the bottom of the page redirects to Algolia with the query in the URL,passed,777,0,hackernews,,
-2026-04-12T01:06:55.532Z,unknown,10_search,,search_results_load_within_threshold.spec.js,search results load within 2 seconds,passed,725,0,hackernews,,
-2026-04-12T01:06:55.532Z,unknown,10_search,,search_returns_no_results_for_nonsense_query.spec.js,searching a nonsense string returns zero results,passed,685,0,hackernews,,
-2026-04-12T01:06:55.532Z,unknown,10_search,,search_triggers_network_request.spec.js,searching triggers a successful Algolia backend network request,passed,759,0,hackernews,,
-2026-04-12T01:06:55.532Z,unknown,10_search,,search_updates_url_query_params.spec.js,searching updates the URL query parameters correctly,passed,1491,0,hackernews,,
-2026-04-12T01:06:55.532Z,unknown,10_search,,sorting_updates_url_and_results.spec.js,changing sort option updates the URL and results remain visible,passed,2024,0,hackernews,,
-2026-04-12T01:06:55.532Z,unknown,11_authentication,basic_auth,cancel_login.spec.js,providing empty credentials returns a 401 response and shows not authorized,passed,182,0,hackernews,,
-2026-04-12T01:06:55.532Z,unknown,11_authentication,basic_auth,invalid_password_login.spec.js,wrong password returns a 401 response and shows not authorized,passed,183,0,hackernews,,
-2026-04-12T01:06:55.532Z,unknown,11_authentication,basic_auth,invalid_username_login.spec.js,wrong username returns a 401 response and shows not authorized,passed,186,0,hackernews,,
-2026-04-12T01:06:55.532Z,unknown,11_authentication,basic_auth,valid_login.spec.js,valid credentials grant access to the basic auth protected page,passed,239,0,hackernews,,
-2026-04-12T01:06:55.532Z,unknown,11_authentication,form_auth,invalid_login_attempts.spec.js,"empty form, wrong username, and wrong password each show the correct error",passed,728,0,hackernews,,
-2026-04-12T01:06:55.532Z,unknown,11_authentication,form_auth,valid_login_and_logout.spec.js,valid login shows secure area confirmation and logout shows sign-out confirmation,passed,580,0,hackernews,,
+2026-04-12T01:14:18.452Z,unknown,06_ask_page,navigation,author_click_navigates_to_profile.spec.js,clicking the author name navigates to the author profile page,passed,723,1,hackernews,,
+2026-04-12T01:14:18.452Z,unknown,06_ask_page,navigation,comments_link_opens_discussion.spec.js,clicking the comments link opens the discussion page,passed,594,0,hackernews,,
+2026-04-12T01:14:18.452Z,unknown,07_show_page,functionality,ranks_increase_sequentially.spec.js,rank numbers on the show page increase sequentially,passed,493,0,hackernews,,
+2026-04-12T01:14:18.452Z,unknown,07_show_page,functionality,scores_formatted_correctly.spec.js,story scores on the show page are numeric and formatted correctly,passed,443,0,hackernews,,
+2026-04-12T01:14:18.452Z,unknown,07_show_page,functionality,stories_render_correctly.spec.js,"show page stories render with title, rank, score, and author visible",passed,466,0,hackernews,,
+2026-04-12T01:14:18.452Z,unknown,07_show_page,navigation,article_title_redirects_outside_hn.spec.js,clicking the article title redirects to an external site outside Hacker News,passed,718,0,hackernews,,
+2026-04-12T01:14:18.452Z,unknown,07_show_page,navigation,comments_link_navigates_to_discussion.spec.js,clicking the comments link navigates to the article discussion page,passed,693,0,hackernews,,
+2026-04-12T01:14:18.452Z,unknown,07_show_page,navigation,more_button_loads_next_page.spec.js,"clicking the ""More"" button navigates to the next page of show stories",passed,686,0,hackernews,,
+2026-04-12T01:14:18.452Z,unknown,07_show_page,navigation,rules_tips_and_newest_links_redirect_correctly.spec.js,"""rules"", ""tips"", and ""newest Show HN"" links redirect to the correct pages",passed,968,0,hackernews,,
+2026-04-12T01:14:18.452Z,unknown,08_jobs_page,hn_jobs,first_job_listing_works_correctly.spec.js,first job listing opens company profile and job page correctly,passed,6447,0,hackernews,,
+2026-04-12T01:14:18.452Z,unknown,08_jobs_page,hn_jobs,hn_jobs_page_loads_and_yc_link_navigates.spec.js,HN Jobs page loads and the YC Jobs link is visible and navigates correctly,passed,1658,0,hackernews,,
+2026-04-12T01:14:18.452Z,unknown,08_jobs_page,hn_jobs,yc_jobs_page_loads_core_elements.spec.js,"YC Jobs page loads with the correct title and a ""Find a job"" button",passed,2124,0,hackernews,,
+2026-04-12T01:14:18.452Z,unknown,08_jobs_page,yc_jobs,footer_social_media_links_valid.spec.js,footer social media links are visible and point to the correct URLs,passed,1806,0,hackernews,,
+2026-04-12T01:14:18.452Z,unknown,08_jobs_page,yc_jobs,role_filters_update_listings.spec.js,all job role filters update the page so that only jobs of that role are listed,passed,6576,0,hackernews,,
+2026-04-12T01:14:18.452Z,unknown,08_jobs_page,yc_jobs,video_carousel_loads.spec.js,the YC Jobs video carousel loads with slides and clicking a slide navigates to the library,passed,2952,0,hackernews,,
+2026-04-12T01:14:18.452Z,unknown,09_footer,,footer_links_valid.spec.js,all footer links are visible and point to the correct URLs,passed,705,0,hackernews,,
+2026-04-12T01:14:18.452Z,unknown,10_search,,search_input_type_attribute_is_search.spec.js,the search input has the correct ARIA type attribute for accessibility,passed,631,0,hackernews,,
+2026-04-12T01:14:18.452Z,unknown,10_search,,search_redirects_to_algolia.spec.js,the search tool at the bottom of the page redirects to Algolia with the query in the URL,passed,753,0,hackernews,,
+2026-04-12T01:14:18.452Z,unknown,10_search,,search_results_load_within_threshold.spec.js,search results load within 2 seconds,passed,926,0,hackernews,,
+2026-04-12T01:14:18.452Z,unknown,10_search,,search_returns_no_results_for_nonsense_query.spec.js,searching a nonsense string returns zero results,passed,751,0,hackernews,,
+2026-04-12T01:14:18.452Z,unknown,10_search,,search_triggers_network_request.spec.js,searching triggers a successful Algolia backend network request,passed,707,0,hackernews,,
+2026-04-12T01:14:18.452Z,unknown,10_search,,search_updates_url_query_params.spec.js,searching updates the URL query parameters correctly,passed,1570,0,hackernews,,
+2026-04-12T01:14:18.452Z,unknown,10_search,,sorting_updates_url_and_results.spec.js,changing sort option updates the URL and results remain visible,passed,1702,0,hackernews,,
+2026-04-12T01:14:18.452Z,unknown,11_authentication,basic_auth,cancel_login.spec.js,providing empty credentials returns a 401 response and shows not authorized,passed,349,0,hackernews,,
+2026-04-12T01:14:18.452Z,unknown,11_authentication,basic_auth,invalid_password_login.spec.js,wrong password returns a 401 response and shows not authorized,passed,281,0,hackernews,,
+2026-04-12T01:14:18.452Z,unknown,11_authentication,basic_auth,invalid_username_login.spec.js,wrong username returns a 401 response and shows not authorized,passed,280,0,hackernews,,
+2026-04-12T01:14:18.452Z,unknown,11_authentication,basic_auth,valid_login.spec.js,valid credentials grant access to the basic auth protected page,passed,573,0,hackernews,,
+2026-04-12T01:14:18.452Z,unknown,11_authentication,form_auth,invalid_login_attempts.spec.js,"empty form, wrong username, and wrong password each show the correct error",passed,1164,0,hackernews,,
+2026-04-12T01:14:18.452Z,unknown,11_authentication,form_auth,valid_login_and_logout.spec.js,valid login shows secure area confirmation and logout shows sign-out confirmation,passed,1004,0,hackernews,,
